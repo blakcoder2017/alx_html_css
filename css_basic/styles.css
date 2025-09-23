@@ -1,0 +1,40 @@
+/* Flexbox layout styles */
+
+/* body contains header, main, and footer stacked vertically */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* full viewport height */
+  margin: 0;
+}
+
+/* main contains article and aside side by side */
+main {
+  display: flex;
+  flex-direction: row;
+  flex: auto; /* takes remaining available space */
+}
+
+/* article should take 2/3 of the width */
+article {
+  flex: 2;
+  overflow-y: auto; /* scrollable if content overflows */
+  padding: 1rem;
+  background-color: #f9f9f9;
+}
+
+/* aside should take 1/3 of the width */
+aside {
+  flex: 1;
+  overflow-y: auto; /* scrollable if content overflows */
+  padding: 1rem;
+  background-color: #e9e9e9;
+}
+
+/* optional: header and footer styling */
+header, footer {
+  padding: 1rem;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+}
